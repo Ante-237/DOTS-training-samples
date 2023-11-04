@@ -16,7 +16,7 @@ public class Rock {
 		rect = myRect;
 		health = (rect.width+1) * (rect.height+1)*15;
 		startHealth = health;
-		depth = Random.Range(.4f,.8f);
+		depth = Random.Range(.4f,0.7f);
 		matrix = GetMatrix();
 	}
 

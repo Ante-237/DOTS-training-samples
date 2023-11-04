@@ -344,6 +344,7 @@ public class Farm : MonoBehaviour {
 					plant.growth = Mathf.Min(plant.growth + Time.deltaTime/10f,1f);
 					plantGrowthProperties[k] = plant.growth;
 				}
+				
 				plantMatProps.SetFloatArray("_Growth",plantGrowthProperties);
 				Graphics.DrawMeshInstanced(plantMesh,0,plantMaterial,matrices[j],plantMatProps);
 			}

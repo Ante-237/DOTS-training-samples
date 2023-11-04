@@ -13,7 +13,7 @@ public class Plant {
 	public Quaternion rotation;
 	public int index;
 	public int seed;
-
+	
 	public static Dictionary<int,Mesh> meshLookup;
 
 	public void Init(int posX, int posY, int randSeed) {

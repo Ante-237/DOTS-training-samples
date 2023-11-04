@@ -12,8 +12,8 @@ public static class Pathing {
 	static List<int> nextTiles;
 	static List<int> outputTiles;
 
-	static int[] dirsX = new int[] { 1,-1,0,0 };
-	static int[] dirsY = new int[] { 0,0,1,-1 };
+	static int[] dirsX = new int[] { 1,-1, 0, 0  };
+	static int[] dirsY = new int[] { 0, 0,1,-1 };
 
 	static int mapWidth;
 	static int mapHeight;

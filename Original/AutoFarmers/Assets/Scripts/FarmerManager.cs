@@ -59,6 +59,7 @@ public class FarmerManager : MonoBehaviour {
 			}
 
 			Graphics.DrawMeshInstanced(farmerMesh,0,farmerMaterial,farmerMatrices);
+			
 		}
 	}
 }
