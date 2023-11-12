@@ -154,9 +154,7 @@ public class Commuter : MonoBehaviour
         switch (currentTask.state)
         {
             case CommuterState.WALK:
-                if (Approach.Apply(ref t, ref speed, currentTask.destinations[currentTask.destinationIndex],
-                    acceleration,
-                    ARRIVAL_THRESHOLD, FRICTION))
+                if (Approach.Apply(ref t, ref speed, currentTask.destinations[currentTask.destinationIndex], acceleration, ARRIVAL_THRESHOLD, FRICTION))
                 {
                     currentTask.destinationIndex++;
                     if (currentTask.destinationIndex > currentTask.destinations.Length - 1)

@@ -413,6 +413,7 @@ public class AntManager : MonoBehaviour {
 			Time.timeScale = 9f;
 		}
 
+		
 		for (int i = 0; i < matrices.Length; i++) {
 			Graphics.DrawMeshInstanced(antMesh,0,antMaterial,matrices[i],matrices[i].Length,matProps[i]);
 		}
@@ -422,5 +423,6 @@ public class AntManager : MonoBehaviour {
 
 		Graphics.DrawMesh(colonyMesh,colonyMatrix,colonyMaterial,0);
 		Graphics.DrawMesh(resourceMesh,resourceMatrix,resourceMaterial,0);
+		
 	}
 }

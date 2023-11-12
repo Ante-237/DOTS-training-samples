@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class KeyboardInput : MonoBehaviour {
 	Text text;
 
-	static bool showText=true;
+	static bool showText = true;
 
 	void Start () {
 		text = GetComponent<Text>();

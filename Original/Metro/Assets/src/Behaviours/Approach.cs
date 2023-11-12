@@ -25,8 +25,7 @@ public class Approach {
 		}
 	}
 
-	public static bool Apply(ref Transform _transform, ref Vector3 _speed, Vector3 _destination, float _acceleration,
-		float _arrivalThreshold, float _friction)
+	public static bool Apply(ref Transform _transform, ref Vector3 _speed, Vector3 _destination, float _acceleration, float _arrivalThreshold, float _friction)
 	{
 		Vector3 _POS = _transform.position;
 		

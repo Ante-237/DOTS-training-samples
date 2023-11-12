@@ -84,7 +84,6 @@ namespace ZombieMaze {
 					}
 				}
 			}
-
 		}
 
 		void OnDestroy() {

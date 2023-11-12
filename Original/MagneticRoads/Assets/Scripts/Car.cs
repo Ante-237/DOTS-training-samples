@@ -24,8 +24,8 @@ public class Car {
 
 	Vector3 position = Vector3.zero;
 	Vector3 lastPosition;
-	Quaternion rotation=Quaternion.identity;
-	public Matrix4x4 matrix=Matrix4x4.identity;
+	Quaternion rotation = Quaternion.identity;
+	public Matrix4x4 matrix = Matrix4x4.identity;
 
 	public Car() {
 		intersectionSpline = new TrackSpline();
@@ -84,6 +84,7 @@ public class Car {
 				normalizedSpeed = approachSpeed;
 			}
 		} else {
+			
 			// speed penalty when we're inside an intersection
 			if (normalizedSpeed>.7f) {
 				normalizedSpeed = .7f;

@@ -126,7 +126,6 @@ public class Templates : MonoBehaviour {
 
     void PrintSummary(){
         Debug.Log("New Simulation Settings...");
-
         Debug.Log("splashRadius: "+fs.splashRadius+"| coolingStrength: "+fs.coolingStrength+"| coolingStrength_falloff: " + fs.coolingStrength_falloff);
         Debug.Log("Fires:"+fs.startingFireCount+" | flameHeight:"+fs.maxFlameHeight+" | cellSize:"+fs.cellSize+" | rows:" + fs.rows+" | columns:" + fs.columns);
         Debug.Log("flashpoint:" + fs.flashpoint+" | heatRadius:" + fs.heatRadius+" | heatTransferRate:" + fs.heatTransferRate);

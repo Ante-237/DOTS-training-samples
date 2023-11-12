@@ -63,6 +63,7 @@ public class BucketChain {
                 _tempBOT.bucketProvider = chain_FULL[i - 1];
             }
         }
+        
         // Perform first chain ASSESS (which will also start the assess timer)
         AssessChain();
     }
@@ -78,7 +79,7 @@ public class BucketChain {
     void AssessChain()
     {
         // Set scooper's nearest water source
-        if(scooper.targetWater==null || scooper.targetWater.volume<=0){
+        if(scooper.targetWater == null || scooper.targetWater.volume<=0){
             scooper.targetWater = scooper.FindNearestWater();
             scooper.location_PICKUP = scooper.location_DROPOFF = scooper.targetWater.transform.position;
             chain_START = scooper.location_PICKUP;

@@ -38,7 +38,8 @@ public class Drone {
 
 		int tileX = Mathf.FloorToInt(smoothPosition.x);
 		int tileY = Mathf.FloorToInt(smoothPosition.z);
-		if (targetPlant==null) {
+		
+		if (targetPlant == null) {
 			if (searchTimer < 0f) {
 				int plantTileHash = Pathing.SearchForOne(tileX,tileY,30,Pathing.IsNavigableAll,Farm.IsHarvestableAndUnreserved,Pathing.fullMapZone);
 				if (plantTileHash != -1) {
