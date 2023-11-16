@@ -154,9 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd47b5183a126c94fbf7df037bb3b67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfPickups: 10
-  NumberOfDrops: 10
-  NumberOfWorkers: 0
+  NumberOfPickups: 5
+  NumberOfDrops: 5
+  NumberOfWorkers: 200
   DistanceApart: 0.2
   speedMove: 1
   WorkerMan: {fileID: 7779106046651196174, guid: 58e0aa6e26d7b8643a63c33322f29bb8,

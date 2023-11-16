@@ -68,6 +68,7 @@ public class UnderstandingScript : MonoBehaviour
         MeshMatrix = Matrix4x4.TRS(new Vector3(0, 0, 0f),Quaternion.identity, new Vector3( 0.05f, 0.02f, 0.08f) );
         ResourceMatrix = Matrix4x4.TRS(new Vector3(0, 0.01f, 0), Quaternion.identity, new Vector3(0.01f, 0.01f, 0.01f));
         
+
     }
 
     private void PlayingWithRotation()
@@ -99,7 +100,7 @@ public class UnderstandingScript : MonoBehaviour
         moveValue = Mathf.PingPong(Time.time, 2f);
         BoxTwo.transform.position = new Vector3(CosValue * 3, moveValue, SineValue * 3);
         //PlayingWithRotation();
-        //CalculatingDotProduct();
+        CalculatingDotProduct();
         //CalculateAddition();
         //CalculateSubtraction();
         //CalculateCrossProduct();
@@ -115,6 +116,9 @@ public class UnderstandingScript : MonoBehaviour
         Graphics.DrawMesh(Plane, ResourceMatrix, _material, 0);
 
         Bounds n = ResourceMesh.bounds;
+        float _y = math.degrees(math.cos(Time.time));
+        ResourceMatrix = Matrix4x4.Rotate( Quaternion.Euler(0.0f, _y, 0.0f ));
+
 
         //  if (MoveRight)
         // {
@@ -258,18 +262,18 @@ public class UnderstandingScript : MonoBehaviour
         Gizmos.DrawWireCube(new Vector3(BoxOne.transform.position.x, BoxOne.transform.position.y, EndPosition), new Vector3(value, value, value));
 
 
-        //Gizmos.color = Color.cyan;
-        //Gizmos.DrawWireCube(new Vector3(CosValue, SineValue, transform.position.z), new Vector3(value,value, value));
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(new Vector3(CosValue, SineValue, transform.position.z), new Vector3(value,value, value));
 
         // for addition box. 
-        // Gizmos.color = Color.red;
-        // Gizmos.DrawWireCube(SumVector, new Vector3(value, value, value));
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(SumVector, new Vector3(value, value, value));
 
-        // Gizmos.color = Color.magenta;
-        // Gizmos.DrawWireCube(SubVector, new Vector3(value, value, value));
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(SubVector, new Vector3(value, value, value));
 
-        //Gizmos.color = Color.green;
-        //Gizmos.DrawWireCube(CrossProduct, new Vector3(value, value, value));
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(CrossProduct, new Vector3(value, value, value));
 
     }
 

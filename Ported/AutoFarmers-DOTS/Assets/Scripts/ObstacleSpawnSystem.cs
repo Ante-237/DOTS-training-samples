@@ -28,15 +28,38 @@ public partial struct ObstacleSpawnSystem : ISystem
                 {
                     Position =  new float3
                     {
-                        x = rand.NextFloat(0.1f),
+                        x = rand.NextFloat() * 20,
                         y= 0,
-                        z = rand.NextFloat(0.5f)
+                        z = rand.NextFloat() * 20
                     },
-                    Scale = 0.5f,
+                    Scale = 0.2f,
                     Rotation = quaternion.identity
                 });
+            
+            state.EntityManager.AddComponent<PickUp>(obstacle);
+        }
+
+        for (int i = 0; i < configuration.NumberOfDrops; i++)
+        {
+            var Drops = state.EntityManager.Instantiate(configuration.DropPrefab);
+            state.EntityManager.SetComponentData(Drops, new LocalTransform
+            {
+                Position = new float3
+                {
+                    x = rand.NextFloat() * 20,
+                    y = 0,
+                    z = rand.NextFloat() * 20
+                },
+                Scale = 0.2f,
+                Rotation = quaternion.identity
+            });
+
+            state.EntityManager.AddComponent<Drop>(Drops);
+
         }
         
 
     }
+
+    
 }

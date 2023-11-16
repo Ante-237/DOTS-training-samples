@@ -32,3 +32,8 @@ public struct Drop : IComponentData
 {
     
 }
+
+public struct ToggleWorker : IComponentData, IEnableableComponent
+{
+    
+}
